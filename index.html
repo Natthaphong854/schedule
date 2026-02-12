@@ -3,131 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ตารางงาน กุมภาพันธ์ 2026</title>
+<title>ตารางงาน เดือนกุมภาพันธ์</title>
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    margin: 10px;
+  font-family: Arial, sans-serif;
+  margin: 10px;
 }
 
-h2 {ตารางเวร กพ
-    text-align: center;
+h2 {
+  text-align: center;
 }
 
 .table-container {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-    min-width: 900px;
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
 }
 
 th, td {
-    border: 1px solid #333;
-    padding: 4px;
-    vertical-align: top;
-    text-align: center;
-    font-size: 14px;
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
 }
 
 th {
-    background-color: #f2f2f2;
-}
-
-.day {
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-.shift {
-    border-top: 1px dashed #aaa;
-    min-height: 24px;
-    text-align: left;
-    font-size: 12px;
-}
-
-.sun { color: red; }
-.sat { color: blue; }
-
-@media (max-width: 600px) {
-    th, td {
-        font-size: 12px;
-    }
+  background-color: #f2f2f2;
 }
 </style>
 </head>
 
 <body>
 
-<h2 id="monthYear"></h2>
+<h2>ตารางงาน เดือนกุมภาพันธ์</h2>
 
 <div class="table-container">
-<table id="calendar">
-<thead>
-<tr>
-    <th class="sun">อา</th>
-    <th>จ</th>
-    <th>อ</th>
-    <th>พ</th>
-    <th>พฤ</th>
-    <th>ศ</th>
-    <th class="sat">ส</th>
-</tr>
-</thead>
-<tbody></tbody>
+<table>
+  <tr>
+    <th>วันที่</th>
+    <th>งาน</th>
+  </tr>
+
+  <tr><td>1</td><td></td></tr>
+  <tr><td>2</td><td></td></tr>
+  <tr><td>3</td><td></td></tr>
+  <tr><td>4</td><td></td></tr>
+  <tr><td>5</td><td></td></tr>
+  <tr><td>6</td><td></td></tr>
+  <tr><td>7</td><td></td></tr>
+  <tr><td>8</td><td></td></tr>
+  <tr><td>9</td><td></td></tr>
+  <tr><td>10</td><td></td></tr>
+  <tr><td>11</td><td></td></tr>
+  <tr><td>12</td><td></td></tr>
+  <tr><td>13</td><td></td></tr>
+  <tr><td>14</td><td></td></tr>
+  <tr><td>15</td><td></td></tr>
+  <tr><td>16</td><td></td></tr>
+  <tr><td>17</td><td></td></tr>
+  <tr><td>18</td><td></td></tr>
+  <tr><td>19</td><td></td></tr>
+  <tr><td>20</td><td></td></tr>
+  <tr><td>21</td><td></td></tr>
+  <tr><td>22</td><td></td></tr>
+  <tr><td>23</td><td></td></tr>
+  <tr><td>24</td><td></td></tr>
+  <tr><td>25</td><td></td></tr>
+  <tr><td>26</td><td></td></tr>
+  <tr><td>27</td><td></td></tr>
+  <tr><td>28</td><td></td></tr>
+
 </table>
 </div>
 
-<script>
-const monthNames = [
-    "มกราคม","กุมภาพันธ์","มีนาคม","เมษายน",
-    "พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม",
-    "กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"
-];
-
-const today = new Date();
-const month = today.getMonth();
-const year = today.getFullYear();
-
-document.getElementById("monthYear").innerText =
-    `ตารางงานประจำเดือน ${monthNames[month]} ${year}`;
-
-const firstDay = new Date(year, month, 1).getDay();
-const daysInMonth = new Date(year, month + 1, 0).getDate();
-const tbody = document.querySelector("#calendar tbody");
-
-let date = 1;
-
-for (let i = 0; i < 6; i++) {
-    const row = document.createElement("tr");
-
-    for (let j = 0; j < 7; j++) {
-        const cell = document.createElement("td");
-
-        if (i === 0 && j < firstDay || date > daysInMonth) {
-            cell.innerHTML = "";
-        } else {
-            cell.innerHTML = `
-                <div class="day">${date}</div>
-                <div class="shift">เช้า:</div>
-                <div class="shift">บ่าย:</div>
-                <div class="shift">ดึก:</div>
-            `;
-            date++;
-        }
-
-        if (j === 0) cell.classList.add("sun");
-        if (j === 6) cell.classList.add("sat");
-
-        row.appendChild(cell);
-    }
-
-    tbody.appendChild(row);
-}
-</script>
-
 </body>
 </html>
+ส่งแล้ว
+เขียนถึง Chitipat Malasai
